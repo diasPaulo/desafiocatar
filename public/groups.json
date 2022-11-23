@@ -1,0 +1,40 @@
+[
+  {
+    "group": "A",
+    "teams": ["qat", "ecu", "sen", "ned"]
+  },
+  {
+    "group": "B",
+    "teams": ["eng", "irn", "usa", "wal"]
+  },
+
+  {
+    "group": "C",
+    "teams": ["arg", "ksa", "mex", "pol"]
+  },
+
+  {
+    "group": "D",
+    "teams": ["fra", "aus", "den", "tun"]
+  },
+
+  {
+    "group": "E",
+    "teams": ["esp", "crc", "ger", "jpn"]
+  },
+
+  {
+    "group": "F",
+    "teams": ["mar", "cro", "bel", "can"]
+  },
+
+  {
+    "group": "G",
+    "teams": ["bra", "srb", "sui", "cmr"]
+  },
+
+  {
+    "group": "H",
+    "teams": ["uru", "kor", "por", "gha"]
+  }
+]

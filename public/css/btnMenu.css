@@ -1,0 +1,109 @@
+#btnOpenCloseMenu svg {
+  width: 24px;
+  height: 24px;
+}
+
+#btnOpenCloseMenu svg line {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  transform-origin: 50% 0;
+}
+
+#btnOpenCloseMenu svg line:nth-of-type(1) {
+  transform: translateY(0);
+  animation-name: line1;
+}
+
+#btnOpenCloseMenu svg line:nth-of-type(2) {
+  transform: translateY(50%);
+  animation-name: line2;
+}
+
+#btnOpenCloseMenu svg line:nth-of-type(3) {
+  transform: translateY(100%);
+  animation-name: line3;
+}
+
+.menuOpened #btnOpenCloseMenu svg line:nth-of-type(1) {
+  animation-name: closeline1;
+}
+
+.menuOpened #btnOpenCloseMenu svg line:nth-of-type(2) {
+  animation-name: closeline2;
+}
+
+.menuOpened #btnOpenCloseMenu svg line:nth-of-type(3) {
+  animation-name: closeline3;
+}
+
+@keyframes line1 {
+  0% {
+    transform: translateY(50%) rotate(45deg);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes line2 {
+  0% {
+    transform: translateY(50%) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes line3 {
+  0% {
+    transform: translateY(50%) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes closeline1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(50%) rotate(45deg);
+  }
+}
+
+@keyframes closeline2 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(50%) rotate(-45deg);
+  }
+}
+
+@keyframes closeline3 {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(50%) rotateX(90deg);
+  }
+}

@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --wine: #8d1b3d;
+  --dark: #1f1e1e;
+  --dark-200: #3c3939;
+  --white: #ffffff;
+  --white-200: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1032px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* =============== MENU OPENED =============== */
+.menuOpened {
+  overflow: hidden;
+  height: 100vh;
+}
+.menuOpened > *:not(header) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menuOpened header {
+  position: relative;
+  height: 100vh;
+  background-color: var(--wine);
+}
+
+.menuOpened header .logo h1 svg path {
+  fill: var(--white-200);
+}
+
+.menuOpened header #btnOpenCloseMenu {
+  display: inline-block;
+}
+
+.menuOpened header button svg {
+  stroke: var(--white-200);
+}
+
+.menuOpened header nav.navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.menuOpened nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 29px;
+  color: var(--white-200);
+}
+
+.menuOpened header nav.social-media {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.1rem;
+}
+
+.menuOpened header nav.social-media a svg {
+  height: 24px;
+  width: auto;
+}
+
+/* =============== HEADER =============== */
+header {
+  padding: 3.4rem 2.4rem;
+
+  background-color: var(--white-200);
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 span {
+  position: absolute;
+  opacity: 0;
+  color: transparent;
+  visibility: hidden;
+}
+
+header nav {
+  display: none;
+}
+
+header button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+header button svg {
+  stroke: var(--dark);
+}
+
+/* =============== HERO =============== */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+  background: url(../images/wallpaper-sm.png);
+  background-size: cover;
+
+  display: grid;
+  place-items: center;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: var(--wine);
+  opacity: 0.7;
+}
+
+#hero svg {
+  z-index: 99;
+  width: 200px;
+  height: auto;
+}
+
+/* =============== GROUPS =============== */
+#groups {
+  padding: 8rem 0 4rem;
+}
+
+#groups .groups {
+  display: grid;
+  grid-template-columns: repeat(8, min(calc(100vw - 4.8rem), 31.2rem));
+  gap: 2.4rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+
+  padding-inline: 2.4rem;
+  padding-bottom: 4rem;
+}
+
+/* ===== RETIRAR BARRA DE ROLAGEM ===== */
+#groups .groups {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* ===== RETIRAR BARRA DE ROLAGEM WebKit ===== */
+#groups .groups::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#groups h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 44px;
+
+  margin-bottom: 4rem;
+}
+
+#groups .group {
+  padding: 2.4rem;
+  width: 100%;
+  max-width: 38.4rem;
+
+  background-color: var(--white-200);
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #3c393933;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+#groups .group .team {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#groups .group .team img {
+  width: 60px;
+  height: 45px;
+}
+
+#groups .group .team p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+#groups .arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+#groups .arrows div {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =============== MATCHS =============== */
+#matchs {
+  padding: 4rem 2.4rem 8rem;
+}
+
+#matchs .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#matchs h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 44px;
+
+  margin-bottom: 0.8rem;
+}
+
+#matchs .match {
+  width: 100%;
+  background-color: var(--white-200);
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #3c393933;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+
+  padding: 2.4rem;
+}
+
+#matchs .match .date-time-match {
+  align-self: center;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--wine);
+}
+
+#matchs .match .home-team {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+#matchs .match .away-team {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.6rem;
+}
+
+#matchs .match .home-team p,
+#matchs .match .away-team p {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 31px;
+}
+
+#matchs .match .home-team img,
+#matchs .match .away-team img {
+  width: 10rem;
+  height: 7.5rem;
+}
+
+#matchs button {
+  width: 100%;
+  background: #fff2f6;
+  border: none;
+  border-radius: 6px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--wine);
+
+  padding: 1.6rem 4.8rem;
+}
+
+#matchs button:hover {
+  background: #ffe0ea;
+  box-shadow: 3px 3px 3px #3c393933;
+}
+
+/* =============== GAMESPLAYED =============== */
+#gamesPlayed {
+  padding: 4rem 2.4rem 8rem;
+}
+
+#gamesPlayed .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#gamesPlayed h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 44px;
+
+  margin-bottom: 0.8rem;
+}
+
+#gamesPlayed .match {
+  width: 100%;
+  background-color: var(--white-200);
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #3c393933;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+
+  padding: 2.4rem;
+}
+
+#gamesPlayed .match .game-score {
+  align-self: center;
+
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--wine);
+}
+
+#gamesPlayed .match .home-team {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+#gamesPlayed .match .away-team {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.6rem;
+}
+
+#gamesPlayed .match .home-team p,
+#gamesPlayed .match .away-team p {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 31px;
+}
+
+#gamesPlayed .match .home-team img,
+#gamesPlayed .match .away-team img {
+  width: 10rem;
+  height: 7.5rem;
+}
+
+#gamesPlayed button {
+  width: 100%;
+  background: #fff2f6;
+  border: none;
+  border-radius: 6px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--wine);
+
+  padding: 1.6rem 4.8rem;
+}
+
+#gamesPlayed button:hover {
+  background: #ffe0ea;
+  box-shadow: 3px 3px 3px #3c393933;
+}
+
+/* =============== ABOUT =============== */
+#about {
+  padding: 4rem 2.4rem 8rem;
+}
+
+#about .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#about h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 44px;
+
+  margin-bottom: 0.8rem;
+}
+
+#about h3 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 29px;
+  margin-bottom: 0.8rem;
+}
+
+#about p {
+  margin-bottom: .6rem;
+}
+
+/* =============== CONTACT =============== */
+#contact {
+  padding: 4rem 2.4rem 8rem;
+}
+
+#contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#contact h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 44px;
+
+  margin-bottom: 0.8rem;
+}
+
+#contact h3 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 29px;
+  margin-bottom: 0.8rem;
+}
+
+#contact p {
+  margin-bottom: .6rem;
+}
+
+#contact nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  margin-top: 3.2rem;
+}
+
+#contact nav a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  border: 1px solid var(--wine);
+  border-radius: 8px;
+  padding: 2.4rem;
+}
+
+#contact nav a:hover {
+  box-shadow: 5px 5px 5px #3c393933;
+}
+
+#contact nav a svg {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+/* =============== FOOTER =============== */
+footer {
+  background-color: var(--wine);
+
+  padding: 6.4rem 2.4rem;
+}
+
+footer .wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 15rem;
+  row-gap: 6.4rem;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+footer nav h3 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 29px;
+  color: var(--white);
+
+  margin-bottom: 0.8rem;
+}
+
+footer nav a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--white-200);
+}
+
+footer div {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  /* =============== HERO =============== */
+  #hero {
+    height: 60rem;
+    background: url(../images/wallpaper-lg.png);
+  }
+
+  #hero svg {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* =============== HEADER =============== */
+  header nav.navigation {
+    display: flex;
+    gap: 5.6rem;
+  }
+
+  header nav a {
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 29px;
+    text-transform: capitalize;
+    color: var(--dark-200);
+  }
+
+  header button {
+    display: none;
+  }
+
+  /* =============== MATCHS =============== */
+  #matchs .match {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+
+    padding: 1rem;
+  }
+
+  #matchs .match .date-time-match {
+    text-align: center;
+  }
+
+  #matchs button {
+    width: max-content;
+  }
+
+  /* =============== GAMESPLAYED =============== */
+  #gamesPlayed .match {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+
+    padding: 1rem;
+  }
+
+  #gamesPlayed .match .game-score {
+    text-align: center;
+  }
+
+  #gamesPlayed button {
+    width: max-content;
+  }
+
+  /* =============== FOOTER =============== */
+  footer .wrapper {
+    column-gap: 0;
+    justify-content: space-between;
+  }
+
+  footer div {
+    flex-basis: initial;
+    align-self: center;
+    text-align: initial;
+  }
+}
